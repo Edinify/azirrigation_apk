@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "Azirrigation",
+    "slug": "Azirrigation",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "azirrigationappclient",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.azirrigation.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cihazı QR kodla skan etmək üçün kamera icazəsi lazımdır.",
+        "NSBluetoothAlwaysUsageDescription": "Cihazı tapmaq və qoşmaq üçün Bluetooth icazəsi lazımdır.",
+        "NSBluetoothPeripheralUsageDescription": "Cihazı tapmaq və qoşmaq üçün Bluetooth icazəsi lazımdır.",
+        "NSLocationWhenInUseUsageDescription": "Wi-Fi şəbəkələrini göstərmək üçün lazımdır.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Wi-Fi şəbəkələrini göstərmək üçün lazımdır."
+      }
+    },
+    "android": {
+      "softwareKeyboardLayoutMode": "pan",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "package": "com.azirrigation.app",
+      "permissions": [
+        "CAMERA",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_STATE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0069FE",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Cihazı QR kodla skan etmək üçün kamera icazəsi lazımdır."
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": ["peripheral", "central"],
+          "bluetoothAlwaysPermission": "Cihazı tapmaq və qoşmaq üçün Bluetooth icazəsi lazımdır."
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
